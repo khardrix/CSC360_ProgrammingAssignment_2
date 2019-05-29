@@ -3,6 +3,7 @@
  *****  Class: CSC-360-001-2019-040    Semester: Summer 2019    Professor: Richard Fox    Student: Ryan Huffman  *****
  *****-----------------------------------------------------------------------------------------------------------*****
  *****                                       Programming Assignment #2                                           *****
+ *****                                               Part 1                                                      *****
  *****                                    Exception : IllegalColorException                                      *****
  *****___________________________________________________________________________________________________________*****
  *****                         The IllegalColorException will require two constructors,                          *****
