@@ -194,10 +194,6 @@ import javafx.scene.layout.*;
 
 public class Main_A extends Application {
 
-    // CLASS VARIABLE(s) declaration(s)
-    // Scanner input1 = null;
-    // Scanner input2 = null;
-    // Scanner input3 = null;
 
     public static void main(String[] args) {
         launch(args);
@@ -215,13 +211,12 @@ public class Main_A extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
+        // Sending the Pane to the input(Pane pane) method
         input(pane);
     }
 
 
     public void input(Pane pane){
-
-
 
         // INSTANCE VARIABLE(s) declaration(s)
         Scanner input1 = null;
