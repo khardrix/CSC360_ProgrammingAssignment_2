@@ -265,6 +265,9 @@ public class Main_A extends Application {
         String stringValue3 = null;
         String stringValue4 = null;
 
+        // Default Color variable
+        Color color = Color.rgb(0,0,0,1.0);
+
         // try block to try to open the input files
         try{
             // Attempting to open the input files
@@ -342,6 +345,7 @@ public class Main_A extends Application {
                             // creates a new Circle if so
                         else{
                             shape = new Circle(x, y, radius);
+                            shape.setFill(color);
                             pane.getChildren().add(shape);
                         }
                     }
@@ -419,6 +423,7 @@ public class Main_A extends Application {
                             // creates a new Rectangle if so
                         else{
                             shape = new Rectangle(x, y, width, height);
+                            shape.setFill(color);
                             pane.getChildren().add(shape);
                         }
                     }
@@ -498,6 +503,7 @@ public class Main_A extends Application {
                             // creates a new Ellipse if so
                         else{
                             shape = new Ellipse(x, y, halfWidth, halfHeight);
+                            shape.setFill(color);
                             pane.getChildren().add(shape);
                         }
                     }
@@ -599,6 +605,7 @@ public class Main_A extends Application {
                             // creates a new Line if so
                         else{
                             shape = new Line(x, y, endX, endY);
+                            shape.setStroke(color);
                             pane.getChildren().add(shape);
                         }
                     }
@@ -674,17 +681,10 @@ public class Main_A extends Application {
                             throw new IllegalColorException("The blue Color value of, " + blueValue + ", is " +
                                     "greater than 255. Which is not a valid rgb Color value between 0 and 255");
                         }
-                        // else block that sets the rgb Color value of the Shape variable "shape" after all the
+                        // else block that sets the rgb Color value of the Color variable "color" after all the
                             // rgb Color are checked to be valid
                         else{
-                            // if block that sets the Color of Circles, Rectangles and Ellipses
-                            if((shape instanceof Circle) || (shape instanceof Rectangle) || (shape instanceof Ellipse)){
-                                shape.setFill(Color.rgb(redValue, greenValue, blueValue, 1.0));
-                            }
-                            // else if block that sets the Color of Lines
-                            else if(shape instanceof Line){
-                                // shape.setStoke(Color.rgb(redValue, greenValue, blueValue, 1.0));
-                            }
+                            color = Color.rgb(redValue, greenValue, blueValue, 1.0);
                         }
                     }
 
